@@ -18,6 +18,15 @@
     $("#score-text").html("0");
     $("#movimientos-text").html("0");
     $(this).html("REINICIAR");
+    $('#timer').timer({
+		countdown: true,
+		duration: '2m',
+		format: '%M:%S',
+		callback: function() {
+        alert('Time up!');
+        $('#timer').timer('reset');
+    	}
+	});
   });
   
 
